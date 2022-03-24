@@ -1,0 +1,32 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.122.1/containers/javascript-node-mongo
+// If you want to run as a non-root user in the container, see .devcontainer/docker-compose.yml.
+{
+	"name": "Togo App",
+	"dockerComposeFile": "../docker-compose-dev.yml",
+	"service": "todo_svc",
+	"workspaceFolder": "/home/node/app",
+
+	// Set *default* container specific settings.json values on container create.
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"tabnine.tabnine-vscode",
+		"esbenp.prettier-vscode",
+		"wengerk.highlight-bad-chars",
+		"eamodio.gitlens"
+	],
+
+	// Uncomment the next line if you want start specific services in your Docker Compose config.
+	// "runServices": [],
+
+	// Uncomment the line below if you want to keep your containers running after VS Code shuts down.
+	// "shutdownAction": "none",
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "npm --global install diff-so-fancy",
+}
